@@ -2,9 +2,10 @@ import React from "react";
 
 function FoodItem({ food }) {
   return (
-    <div>
+    <section>
       <p>{food.name}</p>
-    </div>
+      <img src={food.image} alt={food.name} width="100" height="100" />
+    </section>
   );
 }
 
