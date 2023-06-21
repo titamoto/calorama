@@ -15,7 +15,7 @@ function FoodItem({ food }) {
   }
 
   return (
-    <div id="food-card">
+    <div className="food-card">
       <h4>{food.name}</h4>
       <img src={food.image} alt={food.name} width="200" height="200" />
       <p>{food.type}</p>

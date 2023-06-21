@@ -12,42 +12,64 @@ code {
     monospace;
 }
 
-nav h3 {
-  display: inline-block;
-  margin: 1rem;
-}
-
 header {
-  display: inline;
+  margin-left: 1rem;
 }
 
 header input {
   display: flex;
 }
 
-#food-card {
+nav {
+  background-color: aliceblue;
+}
+
+nav h3 {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.food-card {
   width: fit-content;
   float: left;
   border-style: solid;
   border-color: gainsboro;
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   /* justify-content: center; */
   margin: 20px;
   padding: 10px;
+  align-items: center;
 }
 
-#food-card input {
-  width: 20%;
+.food-card input {
   margin: 2px;
 }
 
+.food-card label {
+  display: flex;
+  flex-direction: column;
+}
+
 #food-page {
-  /* display: flex; */
+  display: flex;
   align-items: center;
   flex-direction: column;
   text-align: center;
   /* flex-flow: row wrap; */
   /* align-items: flex-start;
   justify-content: space-around; */
+}
+
+#save-food {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  /* flex-flow: row wrap; */
+  /* justify-content: space-around; */
+}
+
+#save-food button {
+  width: 80%;
 }

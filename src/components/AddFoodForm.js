@@ -7,21 +7,23 @@ function AddFoodForm() {
   }
 
   return (
-    <div id="food-card">
-      <h3>Add new food</h3>
-      <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input type="text" />
-        <label>Image:</label>
-        <input type="url" />
-        <label>Type:</label>
-        <input type="text" />
-        <label>Grams:</label>
-        <input type="number" step="1" defaultValue="0" min="0" max="1000" />
-        <label>Calories:</label>
-        <input type="number" step="1" defaultValue="0" min="0" max="1000" />
-        <button type="submit">Save food</button>
-      </form>
+    <div id="save-food">
+      <h3>Add Food</h3>
+      <div className="food-card">
+        <form onSubmit={handleSubmit}>
+          <label>name:</label>
+          <input type="text" />
+          <label>image:</label>
+          <input type="url" />
+          <label>type:</label>
+          <input type="text" />
+          <label>grams:</label>
+          <input type="number" step="1" defaultValue="0" min="0" max="1000" />
+          <label>calories:</label>
+          <input type="number" step="1" defaultValue="0" min="0" max="1000" />
+          <button type="submit">save</button>
+        </form>
+      </div>
     </div>
   );
 }
