@@ -11,11 +11,11 @@ function FoodList() {
   }, []);
 
   return (
-    <section id="food-list">
+    <div id="food-list">
       {foods.map((food) => (
         <FoodItem key={food.id} food={food} />
       ))}
-    </section>
+    </div>
   );
 }
 

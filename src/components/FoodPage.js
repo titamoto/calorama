@@ -4,7 +4,7 @@ import SavedFoods from "./SavedFoods";
 
 function FoodPage() {
   return (
-    <div>
+    <div id="food-page">
       <FoodList />
       <SavedFoods />
     </div>

@@ -17,6 +17,37 @@ nav h3 {
   margin: 1rem;
 }
 
+header {
+  display: inline;
+}
+
 header input {
   display: flex;
+}
+
+#food-card {
+  width: fit-content;
+  float: left;
+  border-style: solid;
+  border-color: gainsboro;
+  /* display: flex; */
+  flex-direction: column;
+  /* justify-content: center; */
+  margin: 20px;
+  padding: 10px;
+}
+
+#food-card input {
+  width: 20%;
+  margin: 2px;
+}
+
+#food-page {
+  /* display: flex; */
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  /* flex-flow: row wrap; */
+  /* align-items: flex-start;
+  justify-content: space-around; */
 }

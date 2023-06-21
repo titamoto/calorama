@@ -7,7 +7,6 @@ function FoodItem({ food }) {
   function handleGramsChange(e) {
     setGrams(e.target.value);
     setCalories((e.target.value * (food.calories / food.grams)).toFixed(2));
-    //setCalories(e.target.value * (food.calories / food.grams));
   }
 
   function handleCalChange(e) {
@@ -16,9 +15,9 @@ function FoodItem({ food }) {
   }
 
   return (
-    <section>
+    <div id="food-card">
       <h4>{food.name}</h4>
-      <img src={food.image} alt={food.name} width="100" height="100" />
+      <img src={food.image} alt={food.name} width="200" height="200" />
       <p>{food.type}</p>
       <label>
         <input
@@ -31,6 +30,7 @@ function FoodItem({ food }) {
         ></input>
         grams
       </label>
+      <br />
       <label>
         <input
           type="number"
@@ -41,7 +41,11 @@ function FoodItem({ food }) {
         ></input>
         calories
       </label>
-    </section>
+      <br />
+      <button type="button" id="save-food">
+        +
+      </button>
+    </div>
   );
 }
 
