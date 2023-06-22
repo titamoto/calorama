@@ -21,6 +21,7 @@ function FoodItem({ food, handleSaveButton }) {
       <p>{food.type}</p>
       <label>
         <input
+          name="grams"
           type="number"
           step="1"
           value={grams}
@@ -33,6 +34,7 @@ function FoodItem({ food, handleSaveButton }) {
       <br />
       <label>
         <input
+          name="calories"
           type="number"
           step="1"
           value={calories}
@@ -41,7 +43,6 @@ function FoodItem({ food, handleSaveButton }) {
         ></input>
         calories
       </label>
-      <br />
       <button
         type="button"
         id="save-food"

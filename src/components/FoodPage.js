@@ -13,15 +13,22 @@ function FoodPage() {
   }, [isSaveClicked]);
 
   function handleSaveButton(food) {
+    setIsSaveClicked(true);
     const isFoodSaved = savedFoods.some(
       (savedFood) => savedFood.id === food.id
     );
-    setIsSaveClicked(true);
+
     if (!isFoodSaved) {
       const newSavedFoods = [...savedFoods, food];
       setSavedFoods(newSavedFoods);
-      console.log(savedFoods);
+    } else if (isFoodSaved) {
+      const savedFoodsRestored = savedFoods.filter(
+        (foodToDelete) => foodToDelete.id !== food.id
+      );
+      setSavedFoods(savedFoodsRestored);
     }
+
+    console.log(savedFoods);
   }
   return (
     <div id="food-page">

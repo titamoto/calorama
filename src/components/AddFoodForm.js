@@ -21,10 +21,10 @@ function AddFoodForm() {
   }
 
   return (
-    <div id="save-food">
+    <div id="add-food">
       <h3>Add Food</h3>
       <div className="food-card">
-        <form onSubmit={handleSubmit}>
+        <form name="add-food-form" onSubmit={handleSubmit}>
           <label>name:</label>
           <input
             value={name}

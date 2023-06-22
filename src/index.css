@@ -61,7 +61,7 @@ nav h3 {
   justify-content: space-around; */
 }
 
-#save-food {
+#add-food {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -70,6 +70,6 @@ nav h3 {
   /* justify-content: space-around; */
 }
 
-#save-food button {
+#add-food button {
   width: 80%;
 }
