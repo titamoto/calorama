@@ -5,6 +5,13 @@ import SavedFoods from "./SavedFoods";
 function FoodPage() {
   const [savedFoods, setSavedFoods] = useState([]);
   const [isSaveClicked, setIsSaveClicked] = useState(false);
+  const [foods, setFoods] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/foods")
+      .then((r) => r.json())
+      .then((foods) => setFoods(foods));
+  }, []);
 
   useEffect(() => {
     if (isSaveClicked) {
@@ -28,11 +35,11 @@ function FoodPage() {
       setSavedFoods(savedFoodsRestored);
     }
 
-    console.log(savedFoods);
+    //console.log(savedFoods);
   }
   return (
     <div id="food-page">
-      <FoodList handleSaveButton={handleSaveButton} />
+      <FoodList handleSaveButton={handleSaveButton} foods={foods} />
       <SavedFoods handleSaveButton={handleSaveButton} savedFoods={savedFoods} />
     </div>
   );

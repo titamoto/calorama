@@ -1,15 +1,7 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 import FoodItem from "./FoodItem";
 
-function FoodList({ handleSaveButton }) {
-  const [foods, setFoods] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/foods")
-      .then((r) => r.json())
-      .then((foods) => setFoods(foods));
-  }, []);
-
+function FoodList({ handleSaveButton, foods }) {
   return (
     <div id="food-list">
       {foods.map((food) => (

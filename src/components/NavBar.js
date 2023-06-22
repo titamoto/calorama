@@ -18,11 +18,9 @@ function NavBar() {
       <NavLink to="/saved-food" exact style={linkStyles}>
         Saved Foods
       </NavLink>
-      <button id="add-food-button">
-        <NavLink to="/add-food" exact style={linkStyles}>
-          Add Food
-        </NavLink>
-      </button>
+      <NavLink to="/add-food" exact style={linkStyles}>
+        Add Food
+      </NavLink>
     </nav>
   );
 }
