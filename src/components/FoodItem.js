@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 
-function FoodItem({ food }) {
+function FoodItem({ food, handleSaveButton }) {
   const [grams, setGrams] = useState(food.grams);
   const [calories, setCalories] = useState(food.calories);
 
@@ -42,8 +42,12 @@ function FoodItem({ food }) {
         calories
       </label>
       <br />
-      <button type="button" id="save-food">
-        +
+      <button
+        type="button"
+        id="save-food"
+        onClick={() => handleSaveButton(food)}
+      >
+        save
       </button>
     </div>
   );
