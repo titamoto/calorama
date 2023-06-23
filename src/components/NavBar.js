@@ -15,9 +15,9 @@ function NavBar() {
       <NavLink to="/" exact style={linkStyles}>
         All Food
       </NavLink>
-      <NavLink to="/saved-food" exact style={linkStyles}>
+      {/* <NavLink to="/saved-food" exact style={linkStyles}>
         Saved Foods
-      </NavLink>
+      </NavLink>  */}
       <NavLink to="/add-food" exact style={linkStyles}>
         Add Food
       </NavLink>

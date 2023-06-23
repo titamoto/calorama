@@ -61,6 +61,13 @@ nav h3 {
   justify-content: space-around; */
 }
 
+/* #saved-food {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+} */
+
 #add-food {
   display: flex;
   align-items: center;

@@ -5,7 +5,8 @@ function SavedFoods({ savedFoods, handleSaveButton }) {
   console.log(savedFoods);
 
   return (
-    <div>
+    <div id="saved=food">
+      <h3>Saved Foods</h3>
       {savedFoods &&
         savedFoods.map((food) => (
           <FoodItem

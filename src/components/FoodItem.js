@@ -31,7 +31,6 @@ function FoodItem({ food, handleSaveButton }) {
         ></input>
         grams
       </label>
-      <br />
       <label>
         <input
           name="calories"

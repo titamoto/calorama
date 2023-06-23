@@ -39,8 +39,8 @@ function FoodPage() {
   }
   return (
     <div id="food-page">
-      <FoodList handleSaveButton={handleSaveButton} foods={foods} />
       <SavedFoods handleSaveButton={handleSaveButton} savedFoods={savedFoods} />
+      <FoodList handleSaveButton={handleSaveButton} foods={foods} />
     </div>
   );
 }
