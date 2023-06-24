@@ -13,15 +13,15 @@ function App() {
       <Header />
       <NavBar />
       <Switch>
-        <Route exact path="/saved-food">
-          <SavedFoods />
-        </Route>
-        <Route exact path="/add-food">
-          <AddFoodForm />
-        </Route>
-        <Route exact path="/">
-          <FoodPage />
-        </Route>
+        {/* <Route
+          path="/saved-food"
+          render={(props) => <SavedFoods {...props} />}
+        /> */}
+        <Route path="/add-food" component={AddFoodForm}></Route>
+        <Route path="/" component={FoodPage}></Route>
+        {/* <Route path="*">
+          <h2>404 not found</h2>
+        </Route> */}
       </Switch>
     </div>
   );

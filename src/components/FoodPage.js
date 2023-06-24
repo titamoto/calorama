@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import FoodList from "./FoodList";
 import SavedFoods from "./SavedFoods";
+import { Route } from "react-router-dom";
 
 function FoodPage() {
   const [savedFoods, setSavedFoods] = useState([]);
@@ -34,13 +35,23 @@ function FoodPage() {
       );
       setSavedFoods(savedFoodsRestored);
     }
-
-    //console.log(savedFoods);
   }
+
+  console.log(savedFoods);
   return (
     <div id="food-page">
+      <Route
+        path="/saved-food"
+        render={() => (
+          <SavedFoods
+            handleSaveButton={handleSaveButton}
+            savedFoods={savedFoods}
+          />
+        )}
+      />
       <FoodList handleSaveButton={handleSaveButton} foods={foods} />
-      <SavedFoods handleSaveButton={handleSaveButton} savedFoods={savedFoods} />
+
+      {/* <SavedFoods handleSaveButton={handleSaveButton} savedFoods={savedFoods} /> */}
     </div>
   );
 }

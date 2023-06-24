@@ -3,9 +3,9 @@ import FoodItem from "./FoodItem";
 
 function SavedFoods({ savedFoods, handleSaveButton }) {
   console.log(savedFoods);
-
   return (
     <div>
+      <h3>Saved Foods</h3>
       {savedFoods &&
         savedFoods.map((food) => (
           <FoodItem
