@@ -6,14 +6,17 @@ function SavedFoods({ savedFoods, handleSaveButton }) {
   return (
     <div>
       <h3>Saved Foods</h3>
-      {savedFoods &&
+      {savedFoods.length > 0 ? (
         savedFoods.map((food) => (
           <FoodItem
             key={food.id}
             food={food}
             handleSaveButton={handleSaveButton}
           />
-        ))}
+        ))
+      ) : (
+        <p>No saved foods yet</p>
+      )}
     </div>
   );
 }

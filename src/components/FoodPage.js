@@ -40,18 +40,15 @@ function FoodPage() {
   console.log(savedFoods);
   return (
     <div id="food-page">
-      <Route
-        path="/saved-food"
-        render={() => (
-          <SavedFoods
-            handleSaveButton={handleSaveButton}
-            savedFoods={savedFoods}
-          />
-        )}
-      />
-      <FoodList handleSaveButton={handleSaveButton} foods={foods} />
-
-      {/* <SavedFoods handleSaveButton={handleSaveButton} savedFoods={savedFoods} /> */}
+      <Route exact path="/saved-food">
+        <SavedFoods
+          handleSaveButton={handleSaveButton}
+          savedFoods={savedFoods}
+        />
+      </Route>
+      <Route exact path="/">
+        <FoodList handleSaveButton={handleSaveButton} foods={foods} />
+      </Route>
     </div>
   );
 }
