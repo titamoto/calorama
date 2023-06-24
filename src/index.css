@@ -1,19 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Homemade+Apple");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+@import url("https://fonts.googleapis.com/css?family=Belanosima");
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
+  font-family: "Belanosima";
+  font-size: large;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: white;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
 
 header {
   margin-left: 1rem;
+  font-family: "Homemade Apple";
 }
 
 header input {
@@ -21,35 +28,54 @@ header input {
 }
 
 nav {
-  background-color: aliceblue;
+  margin-left: 1rem;
 }
 
 nav h3 {
   display: inline-block;
-  margin: 1rem;
+  font-size: larger;
+  /* font-family: "Belanosima"; */
 }
 
 .food-card {
+  border-top: 5px;
+  border-top-color: rgb(179, 252, 62);
+  border-top-style: inset;
   width: fit-content;
   float: left;
-  border-style: solid;
-  border-color: gainsboro;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   margin: 20px;
   padding: 10px;
   align-items: center;
+  /* :hover {
+    background-color: rgb(247, 104, 82);
+  } */
 }
 
+.food-card h4 {
+  font-family: "Homemade Apple";
+  font-size: large;
+}
+
+.food-card img {
+  border-radius: 10%;
+}
 .food-card input {
+  max-width: 60px;
   margin: 2px;
+  justify-content: left;
 }
 
-.food-card label {
+.food-card button {
+  margin-top: 10px;
+}
+
+/* .food-card label {
   display: flex;
   flex-direction: column;
-}
+} */
 
 #food-page {
   display: flex;

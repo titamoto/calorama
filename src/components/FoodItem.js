@@ -28,10 +28,9 @@ function FoodItem({ food, handleSaveButton }) {
           min="0"
           max="1000"
           onChange={handleGramsChange}
-        ></input>
+        ></input>{" "}
         grams
       </label>
-      <br />
       <label>
         <input
           name="calories"

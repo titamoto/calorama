@@ -6,6 +6,7 @@ const linkStyles = {
   color: "black",
   padding: "10px",
   textDecoration: "none",
+  fontSize: "larger",
   //marginLeft: "10px",
 };
 
