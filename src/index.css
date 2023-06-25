@@ -29,6 +29,7 @@ header input {
 
 nav {
   margin-left: 1rem;
+  background-color: antiquewhite;
 }
 
 nav h3 {
@@ -38,9 +39,10 @@ nav h3 {
 }
 
 .food-card {
-  border-top: 5px;
-  border-top-color: rgb(179, 252, 62);
-  border-top-style: inset;
+  /* border-top: 5px;
+  border-top-color: rgb(179, 252, 62); */
+  background-color: antiquewhite;
+  /* border-top-style: inset; */
   width: fit-content;
   float: left;
   display: flex;
@@ -59,13 +61,20 @@ nav h3 {
   font-size: large;
 }
 
+.food-card p {
+  font-family: "Belanosima";
+  font-size: medium;
+  text-align: right;
+  display: inline-block;
+}
+
 .food-card img {
   border-radius: 10%;
 }
 .food-card input {
   max-width: 60px;
-  margin: 2px;
-  justify-content: left;
+  margin-right: 5px;
+  /* justify-content: left; */
 }
 
 .food-card button {
