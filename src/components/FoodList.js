@@ -1,17 +1,24 @@
 import { React } from "react";
 import FoodItem from "./FoodItem";
 
-function FoodList({ handleSaveButton, foods, isFoodSaved }) {
+function FoodList({ handleSaveButton, foods, savedFoods }) {
   return (
     <div id="food-list">
-      {foods.map((food) => (
-        <FoodItem
-          key={food.id}
-          food={food}
-          handleSaveButton={handleSaveButton}
-          isFoodSaved={isFoodSaved}
-        />
-      ))}
+      <h3>All Foods</h3>
+      {foods &&
+        foods.map((food) => {
+          const isFoodSaved = savedFoods.some(
+            (savedFood) => savedFood.id === food.id
+          );
+          return (
+            <FoodItem
+              key={food.id}
+              food={food}
+              handleSaveButton={handleSaveButton}
+              isFoodSaved={isFoodSaved}
+            />
+          );
+        })}
     </div>
   );
 }

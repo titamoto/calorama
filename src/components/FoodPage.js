@@ -6,9 +6,7 @@ import { Route } from "react-router-dom";
 
 function FoodPage() {
   const [savedFoods, setSavedFoods] = useState([]);
-  const [isSaveClicked, setIsSaveClicked] = useState(false);
   const [foods, setFoods] = useState([]);
-  let isFoodSaved = false;
 
   useEffect(() => {
     fetch("http://localhost:3000/foods")
@@ -16,18 +14,13 @@ function FoodPage() {
       .then((foods) => setFoods(foods));
   }, []);
 
-  useEffect(() => {
-    if (isSaveClicked) {
-      setIsSaveClicked(false);
-    }
-  }, [isSaveClicked]);
-
   function handleSaveButton(food) {
-    //setIsSaveClicked(true);
-    isFoodSaved = savedFoods.some((savedFood) => savedFood.id === food.id);
+    const isFoodSaved = savedFoods.some(
+      (savedFood) => savedFood.id === food.id
+    );
 
     if (!isFoodSaved) {
-      const newSavedFoods = [...savedFoods, food];
+      const newSavedFoods = [...savedFoods, { ...food, isSaved: true }];
       setSavedFoods(newSavedFoods);
     } else if (isFoodSaved) {
       const savedFoodsRestored = savedFoods.filter(
@@ -41,21 +34,19 @@ function FoodPage() {
   return (
     <div id="food-page">
       <Route path="/add-food">
-        <AddFoodForm savedFood={savedFoods} isFoodSaved={isFoodSaved} />
+        <AddFoodForm savedFood={savedFoods} />
       </Route>
       <Route exact path="/saved-food">
         <SavedFoods
           handleSaveButton={handleSaveButton}
           savedFoods={savedFoods}
-          isSaveClicked={isSaveClicked}
-          isFoodSaved={true}
         />
       </Route>
       <Route exact path="/">
         <FoodList
           handleSaveButton={handleSaveButton}
           foods={foods}
-          isFoodSaved={false}
+          savedFoods={savedFoods}
         />
       </Route>
     </div>

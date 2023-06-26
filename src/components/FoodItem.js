@@ -7,6 +7,7 @@ function FoodItem({ food, handleSaveButton, isFoodSaved }) {
 
   useEffect(() => {
     setIsSaved(isFoodSaved);
+    console.log(isFoodSaved);
   }, [isFoodSaved]);
 
   function handleGramsChange(e) {
@@ -20,10 +21,9 @@ function FoodItem({ food, handleSaveButton, isFoodSaved }) {
   }
 
   function handleSaveClick() {
-    //setIsFoodSaved(!isFoodSaved);
     setIsSaved(!isSaved);
     handleSaveButton(food);
-    console.log(isFoodSaved);
+    //console.log(isFoodSaved);
   }
 
   return (
