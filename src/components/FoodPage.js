@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import AddFoodForm from "./AddFoodForm";
 import FoodList from "./FoodList";
 import SavedFoods from "./SavedFoods";
 import { Route } from "react-router-dom";
@@ -40,6 +41,9 @@ function FoodPage() {
   console.log(savedFoods);
   return (
     <div id="food-page">
+      <Route path="/add-food">
+        <AddFoodForm savedFood={savedFoods} />
+      </Route>
       <Route exact path="/saved-food">
         <SavedFoods
           handleSaveButton={handleSaveButton}

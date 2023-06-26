@@ -17,7 +17,6 @@ function AddFoodForm() {
       },
       body: JSON.stringify(foodObject),
     }).then((r) => r.json());
-    // .then((foodObjects) => console.log(foodObjects));
   }
 
   return (
