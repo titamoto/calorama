@@ -44,6 +44,7 @@ function FoodPage() {
         <SavedFoods
           handleSaveButton={handleSaveButton}
           savedFoods={savedFoods}
+          isSaveClicked={isSaveClicked}
         />
       </Route>
       <Route exact path="/">

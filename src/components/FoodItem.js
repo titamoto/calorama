@@ -3,6 +3,7 @@ import { React, useState } from "react";
 function FoodItem({ food, handleSaveButton }) {
   const [grams, setGrams] = useState(food.grams);
   const [calories, setCalories] = useState(food.calories);
+  const [isFoodSaved, setIsFoodSaved] = useState(false);
 
   function handleGramsChange(e) {
     setGrams(e.target.value);
@@ -12,6 +13,11 @@ function FoodItem({ food, handleSaveButton }) {
   function handleCalChange(e) {
     setCalories(e.target.value);
     setGrams(((e.target.value * food.grams) / food.calories).toFixed(2));
+  }
+
+  function handleSaveClick() {
+    setIsFoodSaved(!isFoodSaved);
+    handleSaveButton(food);
   }
 
   return (
@@ -42,13 +48,15 @@ function FoodItem({ food, handleSaveButton }) {
         ></input>
         <p>calories</p>
       </label>
-      <button
-        type="button"
-        id="save-food"
-        onClick={() => handleSaveButton(food)}
-      >
-        save
-      </button>
+      {isFoodSaved ? (
+        <button type="button" id="delete-food" onClick={handleSaveClick}>
+          delete
+        </button>
+      ) : (
+        <button type="button" id="save-food" onClick={handleSaveClick}>
+          save
+        </button>
+      )}
     </div>
   );
 }

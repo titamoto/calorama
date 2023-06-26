@@ -1,7 +1,7 @@
 import React from "react";
 import FoodItem from "./FoodItem";
 
-function SavedFoods({ savedFoods, handleSaveButton }) {
+function SavedFoods({ savedFoods, handleSaveButton, isSaveClicked }) {
   console.log(savedFoods);
   return (
     <div>
@@ -12,6 +12,7 @@ function SavedFoods({ savedFoods, handleSaveButton }) {
             key={food.id}
             food={food}
             handleSaveButton={handleSaveButton}
+            isSaveClicked={isSaveClicked}
           />
         ))
       ) : (
