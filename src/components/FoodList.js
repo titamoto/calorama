@@ -1,7 +1,7 @@
 import { React } from "react";
 import FoodItem from "./FoodItem";
 
-function FoodList({ handleSaveButton, foods }) {
+function FoodList({ handleSaveButton, foods, isFoodSaved }) {
   return (
     <div id="food-list">
       {foods.map((food) => (
@@ -9,6 +9,7 @@ function FoodList({ handleSaveButton, foods }) {
           key={food.id}
           food={food}
           handleSaveButton={handleSaveButton}
+          isFoodSaved={isFoodSaved}
         />
       ))}
     </div>
