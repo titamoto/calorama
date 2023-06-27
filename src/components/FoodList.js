@@ -3,7 +3,7 @@ import FoodItem from "./FoodItem";
 
 function FoodList({ handleSaveButton, foods, savedFoods }) {
   return (
-    <div id="food-list">
+    <div className="food-list">
       {foods &&
         foods.map((food) => {
           const isFoodSaved = savedFoods.some(

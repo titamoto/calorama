@@ -1,4 +1,4 @@
-#food-list {
+.food-list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,6 +15,7 @@
   margin: 20px;
   padding: 10px;
   background-color: antiquewhite;
+  box-shadow: 5px 5px midnightblue;
 }
 
 .food-card h4 {

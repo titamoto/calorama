@@ -1,9 +1,10 @@
+import "./SavedFoods.css";
 import React from "react";
 import FoodItem from "./FoodItem";
 
 function SavedFoods({ savedFoods, handleSaveButton }) {
   return (
-    <div>
+    <div className="food-list">
       {savedFoods.length > 0 ? (
         savedFoods.map((food) => (
           <FoodItem
@@ -14,7 +15,14 @@ function SavedFoods({ savedFoods, handleSaveButton }) {
           />
         ))
       ) : (
-        <p>No saved foods yet</p>
+        <div id="no-saved-foods">
+          <p>no saved foods yet...</p>
+          <img
+            src="./images/lisa-simpsons-dinner.jpg"
+            alt="no food"
+            width="400px"
+          />
+        </div>
       )}
     </div>
   );

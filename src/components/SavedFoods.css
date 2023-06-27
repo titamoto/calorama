@@ -1,0 +1,15 @@
+#no-saved-foods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
+  min-width: 450px;
+  min-height: 400px;
+  border-radius: 2%;
+  box-shadow: 5px 5px midnightblue;
+  margin: 20px;
+}
+
+img {
+  border-radius: 2%;
+}
