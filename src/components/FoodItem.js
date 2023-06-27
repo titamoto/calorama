@@ -1,3 +1,4 @@
+import "./FoodItem.css";
 import { React, useEffect, useState } from "react";
 
 function FoodItem({ food, handleSaveButton, isFoodSaved }) {
@@ -29,7 +30,7 @@ function FoodItem({ food, handleSaveButton, isFoodSaved }) {
   return (
     <div className="food-card">
       <h4>{food.name}</h4>
-      <p>{food.type}</p>
+      <p className="food-type">{food.type}</p>
       <img src={food.image} alt={food.name} width="200" height="200" />
 
       <label>

@@ -1,0 +1,43 @@
+.food-card {
+  text-align: center;
+  width: fit-content;
+  border-radius: 2%;
+  max-width: 500px;
+  min-width: 180px;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px;
+  background-color: antiquewhite;
+  box-shadow: 5px 5px midnightblue;
+}
+
+.food-card h4 {
+  font-family: "Homemade Apple";
+  font-size: large;
+}
+
+.food-card p {
+  font-size: medium;
+}
+
+.food-type {
+  font-style: normal;
+}
+
+.food-card img {
+  border-radius: 2%;
+  margin: 5%;
+}
+
+.food-card label {
+  display: contents;
+}
+
+.food-card input {
+  height: max-content;
+  max-width: 30%;
+}
+
+.food-card button {
+  min-width: 30%;
+}

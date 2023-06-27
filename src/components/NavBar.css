@@ -1,0 +1,15 @@
+nav a {
+  color: black;
+  border-radius: 2px;
+}
+
+nav a:hover {
+  background-color: lightcoral;
+  color: white;
+  box-shadow: 2px 2px midnightblue;
+}
+
+.active-page-navlink {
+  background-color: midnightblue;
+  color: white;
+}

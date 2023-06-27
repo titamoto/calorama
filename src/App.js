@@ -10,10 +10,9 @@ function App() {
       <Header />
       <NavBar />
       <Switch>
-        <Route path="/" component={FoodPage}></Route>
-        {/* <Route path="*">
-          <h2>404 not found</h2>
-        </Route> */}
+        <Route path="/">
+          <FoodPage />
+        </Route>
       </Switch>
     </div>
   );
