@@ -31,7 +31,6 @@ function FoodPage() {
     }
   }
 
-  //console.log(savedFoods);
   return (
     <div className="food-page">
       <Route path="/add-food">

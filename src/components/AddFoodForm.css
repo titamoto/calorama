@@ -36,3 +36,10 @@
   color: white;
   box-shadow: none;
 }
+
+#add-food p {
+  text-align: center;
+  background-color: lightcoral;
+  color: white;
+  border-radius: 2px;
+}

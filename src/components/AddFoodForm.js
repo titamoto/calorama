@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import "./AddFoodForm.css";
+import React, { useState } from "react";
 
 function AddFoodForm() {
   const [name, setName] = useState("");
@@ -7,21 +7,32 @@ function AddFoodForm() {
   const [type, setType] = useState("");
   const [grams, setGrams] = useState(100);
   const [calories, setCalories] = useState(100);
+  const [message, setMessage] = useState("");
+  const foodObject = { name, image, type, grams, calories };
 
   function handleSubmit(e) {
     e.preventDefault();
-    const foodObject = { name, image, type, grams, calories };
-    fetch("http://localhost:3000/foods", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(foodObject),
-    }).then((r) => r.json());
+    const confirmed = window.confirm("Add this food?");
+    if (confirmed) {
+      setMessage("Food added");
+      fetch("http://localhost:3000/foods", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(foodObject),
+      }).then((r) => r.json());
+    } else {
+      setMessage("Food not added");
+    }
+    setTimeout(() => {
+      setMessage("");
+    }, 2000);
   }
 
   return (
     <div id="add-food">
+      {message && <p>{message}</p>}
       <div id="add-food-card" className="food-card">
         <form name="add-food-form" onSubmit={handleSubmit}>
           <label>name:</label>
