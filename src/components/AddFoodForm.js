@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./AddFoodForm.css";
 
 function AddFoodForm() {
   const [name, setName] = useState("");
@@ -21,8 +22,8 @@ function AddFoodForm() {
 
   return (
     <div id="add-food">
-      <h3>Add Food</h3>
-      <div className="food-card">
+      <div id="add-food-card" className="food-card">
+        <h3>Add Food</h3>
         <form name="add-food-form" onSubmit={handleSubmit}>
           <label>name:</label>
           <input
@@ -31,6 +32,7 @@ function AddFoodForm() {
             type="text"
             onChange={(e) => setName(e.target.value)}
           />
+
           <label>image:</label>
           <input
             value={image}
@@ -38,13 +40,15 @@ function AddFoodForm() {
             type="url"
             onChange={(e) => setImage(e.target.value)}
           />
-          <label>type:</label>
+
+          <label>type: </label>
           <input
             value={type}
             name="type"
             type="text"
             onChange={(e) => setType(e.target.value)}
           />
+
           <label>grams:</label>
           <input
             name="grams"
@@ -55,6 +59,7 @@ function AddFoodForm() {
             max="1000"
             onChange={(e) => setGrams(e.target.value)}
           />
+
           <label>calories:</label>
           <input
             name="calories"
@@ -65,6 +70,7 @@ function AddFoodForm() {
             max="1000"
             onChange={(e) => setCalories(e.target.value)}
           />
+
           <button type="submit">save</button>
         </form>
       </div>

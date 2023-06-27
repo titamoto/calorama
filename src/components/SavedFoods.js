@@ -2,10 +2,8 @@ import React from "react";
 import FoodItem from "./FoodItem";
 
 function SavedFoods({ savedFoods, handleSaveButton }) {
-  //console.log(savedFoods);
   return (
     <div>
-      <h3>Saved Foods</h3>
       {savedFoods.length > 0 ? (
         savedFoods.map((food) => (
           <FoodItem
