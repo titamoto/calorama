@@ -1,3 +1,4 @@
+import "./FoodPage.css";
 import React, { useEffect, useState } from "react";
 import AddFoodForm from "./AddFoodForm";
 import FoodList from "./FoodList";
@@ -32,7 +33,7 @@ function FoodPage() {
 
   //console.log(savedFoods);
   return (
-    <div id="food-page">
+    <div className="food-page">
       <Route path="/add-food">
         <AddFoodForm savedFood={savedFoods} />
       </Route>

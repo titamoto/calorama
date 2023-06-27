@@ -6,7 +6,7 @@ import FoodPage from "./components/FoodPage";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Header />
       <NavBar />
       <Switch>

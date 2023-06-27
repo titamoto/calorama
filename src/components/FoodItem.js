@@ -29,8 +29,9 @@ function FoodItem({ food, handleSaveButton, isFoodSaved }) {
   return (
     <div className="food-card">
       <h4>{food.name}</h4>
-      <img src={food.image} alt={food.name} width="200" height="200" />
       <p>{food.type}</p>
+      <img src={food.image} alt={food.name} width="200" height="200" />
+
       <label>
         <input
           name="grams"
