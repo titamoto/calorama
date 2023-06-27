@@ -2,7 +2,7 @@
   text-align: center;
   width: fit-content;
   border-radius: 2%;
-  max-width: 500px;
+  max-width: 300px;
   min-width: 180px;
   flex-direction: column;
   margin: 20px;
@@ -29,14 +29,9 @@
   margin: 5%;
 }
 
-.food-card label {
-  display: contents;
-}
+/* .numbers-input {
 
-.food-card input {
-  height: max-content;
-  max-width: 30%;
-}
+} */
 
 .food-card button {
   min-width: 30%;
@@ -46,6 +41,7 @@
   border-radius: 5px;
   border-color: white;
   box-shadow: 2px 2px midnightblue;
+  margin-top: 2%;
 }
 
 #save-food:hover {

@@ -1,5 +1,6 @@
 import "./FoodItem.css";
 import { React, useEffect, useState } from "react";
+import TextField from "@mui/material/TextField";
 
 function FoodItem({ food, handleSaveButton, isFoodSaved }) {
   const [grams, setGrams] = useState(food.grams);
@@ -31,29 +32,39 @@ function FoodItem({ food, handleSaveButton, isFoodSaved }) {
       <p className="food-type">{food.type}</p>
       <img src={food.image} alt={food.name} width="200" height="200" />
 
-      <label>
-        <input
-          name="grams"
-          type="number"
-          step="1"
-          value={grams}
-          min="0"
-          max="1000"
-          onChange={handleGramsChange}
-        ></input>
-        <p>grams</p>
-      </label>
-      <label>
-        <input
-          name="calories"
-          type="number"
-          step="1"
-          value={calories}
-          min="0"
-          onChange={handleCalChange}
-        ></input>
-        <p>calories</p>
-      </label>
+      <TextField
+        className="numbers-input"
+        size="small"
+        label="grams"
+        name="grams"
+        type="number"
+        step="1"
+        value={grams}
+        min="0"
+        max="1000"
+        margin="dense"
+        onChange={handleGramsChange}
+        InputLabelProps={{
+          shrink: true,
+        }}
+      />
+
+      <TextField
+        className="numbers-input"
+        label="calories"
+        size="small"
+        name="calories"
+        type="number"
+        step="1"
+        value={calories}
+        min="0"
+        margin="dense"
+        onChange={handleCalChange}
+        InputLabelProps={{
+          shrink: true,
+        }}
+      />
+
       {isSaved ? (
         <button type="button" id="delete-food" onClick={handleSaveClick}>
           delete
