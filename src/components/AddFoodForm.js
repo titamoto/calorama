@@ -2,7 +2,7 @@ import "./AddFoodForm.css";
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 
-function AddFoodForm() {
+function AddFoodForm({ addFood }) {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   const [type, setType] = useState("");
@@ -24,7 +24,7 @@ function AddFoodForm() {
         body: JSON.stringify(foodObject),
       })
         .then((r) => r.json())
-        .then((food) => AddFoodForm(food));
+        .then((food) => addFood(food));
     } else {
       setMessage("Food not added");
     }
