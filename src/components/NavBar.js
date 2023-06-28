@@ -23,7 +23,7 @@ function NavBar() {
       <NavLink
         exact
         activeClassName="active-page-navlink"
-        to="/saved-food"
+        to="/saved"
         style={linkStyles}
       >
         Saved Foods
@@ -31,7 +31,7 @@ function NavBar() {
       <NavLink
         exact
         activeClassName="active-page-navlink"
-        to="/add-food"
+        to="/new"
         style={linkStyles}
       >
         Add Food

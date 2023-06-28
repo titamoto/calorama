@@ -33,10 +33,10 @@ function FoodPage() {
 
   return (
     <div className="food-page">
-      <Route path="/add-food">
+      <Route path="/new">
         <AddFoodForm savedFood={savedFoods} />
       </Route>
-      <Route exact path="/saved-food">
+      <Route exact path="/saved">
         <SavedFoods
           handleSaveButton={handleSaveButton}
           savedFoods={savedFoods}
