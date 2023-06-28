@@ -1,4 +1,5 @@
 #no-saved-foods {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,4 +13,10 @@
 
 img {
   border-radius: 2%;
+  margin: 5%;
+}
+
+p {
+  font-size: medium;
+  margin-top: 1%;
 }

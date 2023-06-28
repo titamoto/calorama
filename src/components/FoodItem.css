@@ -1,4 +1,5 @@
 .food-card {
+  padding: 10px;
   text-align: center;
   width: fit-content;
   border-radius: 2%;
@@ -11,27 +12,21 @@
   box-shadow: 5px 5px midnightblue;
 }
 
-.food-card h4 {
+h4 {
   font-family: "Homemade Apple";
   font-size: large;
+  margin: 1%;
 }
 
-.food-card p {
+p {
   font-size: medium;
+  margin: 0;
 }
 
-.food-type {
-  font-style: normal;
-}
-
-.food-card img {
+img {
   border-radius: 2%;
   margin: 5%;
 }
-
-/* .numbers-input {
-
-} */
 
 .food-card button {
   min-width: 30%;
@@ -41,7 +36,7 @@
   border-radius: 5px;
   border-color: white;
   box-shadow: 2px 2px midnightblue;
-  margin-top: 2%;
+  margin: 5%;
 }
 
 #save-food:hover {
