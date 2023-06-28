@@ -22,7 +22,9 @@ function AddFoodForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(foodObject),
-      }).then((r) => r.json());
+      })
+        .then((r) => r.json())
+        .then((food) => AddFoodForm(food));
     } else {
       setMessage("Food not added");
     }

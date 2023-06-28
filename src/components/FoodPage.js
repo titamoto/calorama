@@ -15,6 +15,10 @@ function FoodPage() {
       .then((foods) => setFoods(foods));
   }, []);
 
+  function addFood(newFood) {
+    setFoods([...foods, newFood]);
+  }
+
   function handleSaveButton(food) {
     const isFoodSaved = savedFoods.some(
       (savedFood) => savedFood.id === food.id
@@ -34,7 +38,7 @@ function FoodPage() {
   return (
     <div className="food-page">
       <Route path="/new">
-        <AddFoodForm savedFood={savedFoods} />
+        <AddFoodForm savedFood={savedFoods} addFood={addFood} />
       </Route>
       <Route exact path="/saved">
         <SavedFoods
