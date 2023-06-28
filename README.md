@@ -1,6 +1,6 @@
 # Calorama 🍅
 
-Calorama is a web-app that shows how many calories different foods have.
+[Calorama](https://calorama.netlify.app/) is a web-app that shows how many calories different foods have.
 
 ## How to Install
 
