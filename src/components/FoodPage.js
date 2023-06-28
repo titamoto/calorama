@@ -10,7 +10,7 @@ function FoodPage() {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    fetch("https://calorama.onrender.com/foods")
+    fetch(`${process.env.REACT_APP_API_URL}/foods`)
       .then((r) => r.json())
       .then((foods) => setFoods(foods));
   }, []);

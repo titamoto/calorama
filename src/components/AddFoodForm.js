@@ -16,7 +16,7 @@ function AddFoodForm() {
     const confirmed = window.confirm("Add this food?");
     if (confirmed) {
       setMessage("Food added");
-      fetch("https://calorama.onrender.com/foods", {
+      fetch(`${process.env.REACT_APP_API_URL}/foods`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
