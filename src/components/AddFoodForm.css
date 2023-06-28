@@ -10,11 +10,11 @@
   background-color: antiquewhite;
 }
 
-#add-food-card label {
+/* #add-food-card label {
   display: flex;
   flex-direction: column;
   margin: 2%;
-}
+} */
 
 #add-food-card button {
   margin: 10%;
