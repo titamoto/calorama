@@ -10,7 +10,7 @@ function FoodPage() {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/foods")
+    fetch("https://calorama.onrender.com/foods")
       .then((r) => r.json())
       .then((foods) => setFoods(foods));
   }, []);

@@ -16,7 +16,7 @@ function AddFoodForm() {
     const confirmed = window.confirm("Add this food?");
     if (confirmed) {
       setMessage("Food added");
-      fetch("http://localhost:3000/foods", {
+      fetch("https://calorama.onrender.com/foods", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
