@@ -17,11 +17,7 @@ function SavedFoods({ savedFoods, handleSaveButton }) {
       ) : (
         <div id="no-saved-foods">
           <p>no saved foods yet...</p>
-          <img
-            src="./images/lisa-simpsons-dinner.jpg"
-            alt="no food"
-            width="400px"
-          />
+          <img src="./images/lisa-simpsons-dinner.jpg" alt="no food" />
         </div>
       )}
     </div>
