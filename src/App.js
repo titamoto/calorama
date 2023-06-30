@@ -9,11 +9,9 @@ function App() {
     <div className="app">
       <Header />
       <NavBar />
-      <Switch>
-        <Route path="/">
-          <FoodPage />
-        </Route>
-      </Switch>
+      <Route path="/">
+        <FoodPage />
+      </Route>
     </div>
   );
 }

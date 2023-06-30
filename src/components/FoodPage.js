@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import AddFoodForm from "./AddFoodForm";
 import FoodList from "./FoodList";
 import SavedFoods from "./SavedFoods";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 function FoodPage() {
   const [savedFoods, setSavedFoods] = useState([]);
@@ -37,22 +37,24 @@ function FoodPage() {
 
   return (
     <div className="food-page">
-      <Route path="/new">
-        <AddFoodForm savedFood={savedFoods} addFood={addFood} />
-      </Route>
-      <Route exact path="/saved">
-        <SavedFoods
-          handleSaveButton={handleSaveButton}
-          savedFoods={savedFoods}
-        />
-      </Route>
-      <Route exact path="/">
-        <FoodList
-          handleSaveButton={handleSaveButton}
-          foods={foods}
-          savedFoods={savedFoods}
-        />
-      </Route>
+      <Switch>
+        <Route path="/new">
+          <AddFoodForm savedFood={savedFoods} addFood={addFood} />
+        </Route>
+        <Route exact path="/saved">
+          <SavedFoods
+            handleSaveButton={handleSaveButton}
+            savedFoods={savedFoods}
+          />
+        </Route>
+        <Route exact path="/">
+          <FoodList
+            handleSaveButton={handleSaveButton}
+            foods={foods}
+            savedFoods={savedFoods}
+          />
+        </Route>
+      </Switch>
     </div>
   );
 }
