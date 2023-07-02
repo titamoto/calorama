@@ -46,7 +46,7 @@ GitHub repository for the server is available on [https://github.com/titamoto/ca
 ## How to Use
 
 - **All Foods Page**  
-  All Foods Page has all available foods. Every food card shows calories per serving size. You can adjust serving size to see calories number for it and vice versa. Press 'Save' button to save the food.
+  All Foods Page has all available foods. Every food card shows calories per serving size. You can adjust serving size to see calories number for it and vice versa. Press     'Save' button to save the food.
 
   <img width="946" alt="calorama-homepage" src="https://github.com/titamoto/calorama/assets/12079345/935a61fa-5cc6-4f5e-9ed7-f54568e9d266">
 
@@ -54,12 +54,12 @@ GitHub repository for the server is available on [https://github.com/titamoto/ca
 - **Saved Foods Page**  
   Saved Foods Page has all foods saved by you. Press 'Delete' button to remove the food from the page.
 
-<img width="946" alt="calorama-savedfoods" src="https://github.com/titamoto/calorama/assets/12079345/9e3b25f1-975d-444e-bc78-a0d2c5492655">
+  <img width="946" alt="calorama-savedfoods" src="https://github.com/titamoto/calorama/assets/12079345/9e3b25f1-975d-444e-bc78-a0d2c5492655">
 
 - **Add Food Page**  
-  You can add your own food to the list on this page. Use form to add name, type, image, serving size and calories and press submit to add your food. The food will be shown on All Foods page.
+  You can add your own food to the list on this page. Use form to add name, type, image, serving size and calories and press submit to add your food. The food will be shown   on All Foods page.
 
-<img width="946" alt="calorama-addfoods" src="https://github.com/titamoto/calorama/assets/12079345/6d36c88b-2ac4-447c-9b92-8628e614ba06">
+  <img width="946" alt="calorama-addfoods" src="https://github.com/titamoto/calorama/assets/12079345/6d36c88b-2ac4-447c-9b92-8628e614ba06">
 
 ## Credits
 
